@@ -2,10 +2,11 @@
   "name": "amrit-sagar-backend",
   "version": "1.0.0",
   "description": "Backend for Amrit Sagar Ashram Retreat Website",
-  "main": "server.js",
+  "main": "static-server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
+    "start": "node static-server.js",
+    "dev": "nodemon static-server.js",
+    "build": "echo 'Build completed - static files ready'",
     "test": "jest",
     "seed": "node scripts/seedDatabase.js"
   },
