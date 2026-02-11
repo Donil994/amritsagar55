@@ -17,13 +17,11 @@ app.use(cors({
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use(express.static(path.join(__dirname)));
 
-// Handle HTML routes - both with and without .html extension
-app.get(['/about-aghor-foundation', '/about-aghor-foundation.html', '/about-bal-ashram', '/about-bal-ashram.html', 
-         '/about-holistic-farm', '/about-holistic-farm.html', '/about-team', '/about-team.html',
-         '/programs-day-visit', '/programs-day-visit.html', '/programs-retreats', '/programs-retreats.html',
-         '/programs-yoga', '/programs-yoga.html', '/programs-treatments', '/programs-treatments.html',
-         '/amenities', '/amenities.html', '/contact', '/contact.html'], (req, res) => {
-    const filePath = req.path.replace('.html', '') + '.html';
+// Serve HTML files for all routes
+app.get(['/about-aghor-foundation', '/about-bal-ashram', '/about-holistic-farm', '/about-team', 
+         '/programs-day-visit', '/programs-retreats', '/programs-yoga', '/programs-treatments',
+         '/amenities', '/contact'], (req, res) => {
+    const filePath = req.path.slice(1) + '.html';
     res.sendFile(path.join(__dirname, filePath));
 });
 
@@ -43,7 +41,7 @@ app.get('/health', (req, res) => {
 });
 
 // Handle 404
-app.use((req, res) => {
+app.use('*', (req, res) => {
     res.status(404).send(`
         <!DOCTYPE html>
         <html>
@@ -65,26 +63,23 @@ app.use((req, res) => {
     `);
 });
 
-// Only start server if not running on Vercel
-if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
-    const server = app.listen(PORT, () => {
-        console.log(`
+const server = app.listen(PORT, () => {
+    console.log(`
 🌟 Amrit Sagar Static Server Running 🌟
 📍 Port: ${PORT}
 🌍 Environment: development
 🕐 Started at: ${new Date().toLocaleString()}
 📡 Health check: http://localhost:${PORT}/health
-        `);
-    });
+    `);
+});
 
-    // Graceful shutdown
-    process.on('SIGTERM', () => {
-        console.log('SIGTERM received, shutting down gracefully');
-        server.close(() => {
-            console.log('Process terminated');
-            process.exit(0);
-        });
+// Graceful shutdown
+process.on('SIGTERM', () => {
+    console.log('SIGTERM received, shutting down gracefully');
+    server.close(() => {
+        console.log('Process terminated');
+        process.exit(0);
     });
-}
+});
 
 module.exports = app;
