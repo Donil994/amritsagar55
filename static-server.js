@@ -64,7 +64,7 @@ app.use((req, res) => {
 });
 
 // Only start server if not running on Vercel
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
     const server = app.listen(PORT, () => {
         console.log(`
 🌟 Amrit Sagar Static Server Running 🌟
