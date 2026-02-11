@@ -1,10 +1,16 @@
 {
   "version": 2,
   "name": "amrit-sagar-website",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/static-server.js"
+      "src": "static-server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/static-server.js"
     }
   ]
 }
