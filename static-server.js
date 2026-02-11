@@ -5,13 +5,17 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// CORS configuration
+// Middleware
 app.use(cors({
     origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+
+// Parse JSON bodies
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Serve static files
 app.use('/images', express.static(path.join(__dirname, 'images')));
@@ -38,6 +42,92 @@ app.get('/health', (req, res) => {
         uptime: process.uptime(),
         environment: 'development'
     });
+});
+
+// Contact form endpoint
+app.post('/api/contact', async (req, res) => {
+    try {
+        const { name, email, phone, subject, message, newsletter } = req.body;
+        
+        // Basic validation
+        if (!name || !email || !subject || !message) {
+            return res.status(400).json({
+                success: false,
+                message: 'Please fill in all required fields'
+            });
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            return res.status(400).json({
+                success: false,
+                message: 'Please enter a valid email address'
+            });
+        }
+        
+        // Create contact submission
+        const contactData = {
+            name,
+            email,
+            phone: phone || '',
+            subject,
+            message,
+            newsletter: newsletter === 'on',
+            timestamp: new Date().toISOString(),
+            id: Date.now(),
+            ipAddress: req.ip,
+            userAgent: req.get('User-Agent')
+        };
+        
+        // Store in localStorage (in production, this would go to a database)
+        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+        submissions.push(contactData);
+        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
+        
+        // Log the submission
+        console.log('New contact submission:', contactData);
+        
+        // In a real application, you would:
+        // 1. Save to database
+        // 2. Send email notification
+        // 3. Send auto-reply to user
+        
+        res.status(201).json({
+            success: true,
+            message: 'Your message has been sent successfully. We will get back to you soon!',
+            data: {
+                id: contactData.id,
+                name: contactData.name,
+                email: contactData.email,
+                subject: contactData.subject
+            }
+        });
+        
+    } catch (error) {
+        console.error('Contact submission error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Server error. Please try again later.'
+        });
+    }
+});
+
+// Get contact submissions (admin endpoint)
+app.get('/api/contact', (req, res) => {
+    try {
+        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+        res.json({
+            success: true,
+            data: submissions.reverse() // Most recent first
+        });
+    } catch (error) {
+        console.error('Get submissions error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Server error'
+        });
+    }
 });
 
 // Handle 404

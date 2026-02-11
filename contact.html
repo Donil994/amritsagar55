@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="animations.js" defer></script>
+    <script src="contact.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -59,21 +61,21 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/amrit-sagar-1.jpg'); background-size: cover; background-position: center;">
+        <section class="hero slide-up" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/amrit-sagar-1.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Contact Us</h1>
-                    <p class="hero-subtitle">Get in Touch with Amrit Sagar</p>
+                    <h1 class="slide-up-stagger-1">Contact Us</h1>
+                    <p class="hero-subtitle slide-up-stagger-2">Get in Touch with Amrit Sagar</p>
                 </div>
             </div>
         </section>
 
         <!-- Contact Content -->
-        <section class="section">
+        <section class="section animate-on-scroll">
             <div class="container">
                 <div class="contact-content">
-                    <div class="contact-info">
+                    <div class="contact-info animate-on-scroll slide-up-stagger-1">
                         <div class="contact-item">
                             <h3><i class="fas fa-globe-americas"></i> USA Contact</h3>
                             <p><i class="fas fa-envelope"></i> <a href="mailto:info@amritsagar.org">info@amritsagar.org</a></p>
@@ -100,32 +102,53 @@
                         </div>
                     </div>
                     
-                    <div class="contact-form">
+                    <div class="contact-form animate-on-scroll slide-up-stagger-2">
                         <h3><i class="fas fa-paper-plane"></i> Send us a message</h3>
                         <p>Or, fill out the form below and we'll get back to you as soon as possible. Thank you for your inquiry.</p>
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
                         <form class="form" id="contactForm">
                             <div class="form-group">
                                 <label for="name"><i class="fas fa-user"></i> Name</label>
                                 <input type="text" id="name" name="name" required placeholder="Your full name">
+                                <span class="form-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="fas fa-envelope"></i> Email</label>
                                 <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                                <span class="form-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone"><i class="fas fa-phone"></i> Phone (Optional)</label>
                                 <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                                <span class="form-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="subject"><i class="fas fa-tag"></i> Subject</label>
-                                <input type="text" id="subject" name="subject" required placeholder="How can we help you?">
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="general-inquiry">General Inquiry</option>
+                                    <option value="booking">Booking/Reservation</option>
+                                    <option value="retreat">Retreat Information</option>
+                                    <option value="yoga">Yoga Classes</option>
+                                    <option value="volunteer">Volunteer/Seva</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <span class="form-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="message"><i class="fas fa-comment"></i> Message</label>
                                 <textarea id="message" name="message" rows="5" required placeholder="Tell us more about your inquiry..."></textarea>
+                                <span class="form-error"></span>
                             </div>
-                            <button type="submit" class="btn btn-primary">
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <label for="newsletter">Subscribe to our newsletter for updates and events</label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
                                 <i class="fas fa-paper-plane"></i> Send Message
+                                <span class="btn-loader" style="display: none;"><i class="fas fa-spinner fa-spin"></i></span>
                             </button>
                         </form>
                     </div>
