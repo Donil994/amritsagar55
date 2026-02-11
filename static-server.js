@@ -80,13 +80,14 @@ app.post('/api/contact', async (req, res) => {
             userAgent: req.get('User-Agent')
         };
         
-        // Store in localStorage (in production, this would go to a database)
-        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
-        submissions.push(contactData);
-        localStorage.setItem('contactSubmissions', JSON.stringify(submissions));
-        
-        // Log the submission
+        // Log the submission (in production, save to database)
         console.log('New contact submission:', contactData);
+        
+        // Store in memory for demo (in production, use database)
+        if (!global.contactSubmissions) {
+            global.contactSubmissions = [];
+        }
+        global.contactSubmissions.push(contactData);
         
         // In a real application, you would:
         // 1. Save to database
@@ -116,7 +117,7 @@ app.post('/api/contact', async (req, res) => {
 // Get contact submissions (admin endpoint)
 app.get('/api/contact', (req, res) => {
     try {
-        const submissions = JSON.parse(localStorage.getItem('contactSubmissions') || '[]');
+        const submissions = global.contactSubmissions || [];
         res.json({
             success: true,
             data: submissions.reverse() // Most recent first

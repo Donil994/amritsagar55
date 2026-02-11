@@ -155,11 +155,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (response.ok) {
                 const result = await response.json();
                 console.log('Form submitted successfully:', result);
-                return { success: true };
+                return { success: true, data: result };
             } else {
-                // If API fails, fall back to simulation
-                console.log('API unavailable, using fallback');
-                return await fallbackSubmission(data);
+                const errorData = await response.json().catch(() => ({}));
+                console.log('API error:', errorData);
+                return { 
+                    success: false, 
+                    message: errorData.message || 'Submission failed' 
+                };
             }
         } catch (error) {
             console.log('Network error, using fallback:', error);
