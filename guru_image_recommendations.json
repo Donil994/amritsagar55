@@ -1,0 +1,17 @@
+[
+  {
+    "file": "images/9.jpg",
+    "reason": "Commonly used for spiritual leaders, portrait orientation",
+    "confidence": "high"
+  },
+  {
+    "file": "images/17.jpg",
+    "reason": "Another common portrait image, good quality",
+    "confidence": "medium"
+  },
+  {
+    "file": "images/amrit-sagar-1.jpg",
+    "reason": "Main ashram image, could include guru",
+    "confidence": "low"
+  }
+]

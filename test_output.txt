@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrit Yoga Holistic Center - An Ashram Retreat on the Ganges</title>
+    <meta name="description" content="Experience tranquil living at Amrit Yoga Holistic Center in Varanasi. Daily yoga, meditation, and spiritual retreats on the sacred Ganges River.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo-white.png" alt="Amrit Sagar Logo" style="height: 40px;">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#about" class="nav-link">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-aghor-foundation.html">Aghor Foundation</a></li>
+                            <li><a href="about-bal-ashram.html">Bal Ashram and Amrit Yoga</a></li>
+                            <li><a href="about-holistic-farm.html">Amrit Sagar Holistic Farm</a></li>
+                            <li><a href="about-team.html">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="amenities.html" class="nav-link">Amenities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#programs" class="nav-link">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs-day-visit.html">Day Visit</a></li>
+                            <li><a href="programs-retreats.html">Retreats</a></li>
+                            <li><a href="programs-yoga.html">Yoga</a></li>
+                            <li><a href="programs-treatments.html">Treatments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/4.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Amrit Yoga Holistic Center</h1>
+                    <p class="hero-subtitle">An Ashram Retreat on the Ganges</p>
+                    <p class="hero-description">
+                        Experience tranquil living at Amrit Yoga Holistic Center in Varanasi. 
+                        Daily yoga, meditation, and spiritual retreats on the sacred Ganges River.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">Learn More</a>
+                        <a href="#programs" class="btn btn-secondary">View Programs</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Amrit Sagar</h2>
+                    <p class="section-subtitle">A spiritual home on the sacred Ganges</p>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            Welcome to Amrit Sagar, a tranquil oasis nestled on the banks of the sacred Ganges River in Varanasi. 
+                            Our ashram serves as a spiritual home where ancient wisdom meets modern living, offering a sanctuary for those seeking peace, healing, and selfless service.
+                        </p>
+                        <p>
+                            At the heart of our community is Bal Ashram, a loving home for children who have been orphaned, abandoned, or come from underprivileged backgrounds. 
+                            Here, children receive not only shelter and education but also love, care, and spiritual guidance in a nurturing environment.
+                        </p>
+                        <p>
+                            Amrit Yoga Holistic Center provides daily yoga classes, meditation sessions, and various workshops designed to promote physical, mental, and spiritual wellbeing. 
+                            Our experienced instructors guide practitioners of all levels, from beginners to advanced students.
+                        </p>
+                        <p>
+                            The Amrit Sagar Holistic Farm demonstrates our commitment to sustainable living and organic agriculture. 
+                            Here, we practice eco-friendly farming methods that nourish both body and earth, providing fresh, organic produce for our community.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/amrit-sagar-1.jpg" alt="Amrit Sagar Ashram on Ganges" style="border-radius: 15px; box-shadow: var(--shadow-hover);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Group Retreats Section -->
+        <section id="retreats" class="section section-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Perfect For Group Retreats</h2>
+                    <p class="section-subtitle">Host your group retreat at our ashram</p>
+                </div>
+                <div class="retreats-content">
+                    <div class="retreats-features">
+                        <div class="feature-card reveal">
+                            <div class="feature-icon">
+                                <i class="fas fa-spa"></i>
+                            </div>
+                            <h3>Daily Yoga Classes</h3>
+                            <p>Morning and evening group meditation gatherings</p>
+                        </div>
+                        <div class="feature-card reveal">
+                            <div class="feature-icon">
+                                <i class="fas fa-om"></i>
+                            </div>
+                            <h3>Group Meditation</h3>
+                            <p>Morning and evening group meditation gatherings</p>
+                        </div>
+                        <div class="feature-card reveal">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>Holistic Therapies</h3>
+                            <p>Ayurvedic and Naturopathic therapies at our center</p>
+                        </div>
+                        <div class="feature-card reveal">
+                            <div class="feature-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h3>Service Opportunities</h3>
+                            <p>Numerous service opportunities through community initiatives</p>
+                        </div>
+                    </div>
+                    <div class="retreats-cta">
+                        <p>We welcome yoga teachers from India and abroad to host group retreats with their students at our Ashram. We can accommodate up to <strong>25</strong> participants.</p>
+                        <a href="#contact" class="btn btn-primary">Inquire About Your Group</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities Section -->
+        <section id="amenities" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Amenities</h2>
+                    <p class="section-subtitle">Everything you need for a comfortable stay</p>
+                </div>
+                <div class="amenities-grid">
+                    <div class="amenity-category">
+                        <h3>Included</h3>
+                        <ul class="amenity-list">
+                            <li><i class="fas fa-check"></i> Daily Yoga Classes</li>
+                            <li><i class="fas fa-check"></i> Morning and Evening Meditation</li>
+                            <li><i class="fas fa-check"></i> Walks and Seva Projects at Amrit Sagar Holistic Farm</li>
+                            <li><i class="fas fa-check"></i> Three Daily Meals</li>
+                            <li><i class="fas fa-check"></i> Filtered Drinking Water</li>
+                            <li><i class="fas fa-check"></i> Free WiFi</li>
+                            <li><i class="fas fa-check"></i> Laundry (self-service)</li>
+                            <li><i class="fas fa-check"></i> Western-style Bathrooms</li>
+                            <li><i class="fas fa-check"></i> Family and Pet-friendly</li>
+                            <li><i class="fas fa-check"></i> Languages: Hindi, English</li>
+                            <li><i class="fas fa-check"></i> Garden</li>
+                            <li><i class="fas fa-check"></i> Terrace</li>
+                            <li><i class="fas fa-check"></i> Dedicated Yoga Hall and Meditation Temple</li>
+                        </ul>
+                    </div>
+                    <div class="amenity-category">
+                        <h3>Additional Services</h3>
+                        <ul class="amenity-list">
+                            <li><i class="fas fa-concierge-bell"></i> Airport pick-up and drop-off</li>
+                            <li><i class="fas fa-concierge-bell"></i> Sightseeing and Tours of Varanasi</li>
+                            <li><i class="fas fa-concierge-bell"></i> Boat Rides on the Ganges</li>
+                            <li><i class="fas fa-concierge-bell"></i> Massage and Holistic Treatments</li>
+                            <li><i class="fas fa-concierge-bell"></i> Classes in Sanskrit, Classical Music, Jyotish, Ayurveda</li>
+                        </ul>
+                        <p class="amenity-note">* Additional services can be arranged at the guest's expense</p>
+                    </div>
+                </div>
+                <div class="important-note">
+                    <p><strong>Substance-Free Property:</strong> Alcohol, Smoking, etc. Prohibited</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Photos of Ashram Campus</h2>
+                    <p class="section-subtitle">Experience the beauty and tranquility</p>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-item reveal">
+                        <img src="images/4.jpg" alt="Ashram Campus">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/amrit-sagar-1.jpg" alt="Ganges View">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/9.jpg" alt="Yoga Hall">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/17.jpg" alt="Meditation Temple">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/4.jpg" alt="Garden">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/amrit-sagar-1.jpg" alt="Terrace">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/17.jpg" alt="Ashram Life">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/9.jpg" alt="Sunset Practice">
+                    </div>
+                    <div class="gallery-item reveal">
+                        <img src="images/17.jpg" alt="Evening Meditation">
+                    </div>
+                </div>
+                <div class="gallery-cta">
+                    <a href="#amenities" class="btn btn-outline">See Our Amenities</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Amrit Sagar</h3>
+                        <p>An Ashram Retreat on the Ganges</p>
+                        <p>Experience spiritual practice and selfless service in the heart of Varanasi.</p>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#day-visit">Day Visit</a></li>
+                        <li><a href="#retreats">Retreats</a></li>
+                        <li><a href="#yoga">Yoga</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <p><a href="https://sonomaashram.org/" target="_blank">Our Sister Ashram in California</a></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Amrit Yoga Holistic Center. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
