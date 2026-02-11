@@ -63,23 +63,26 @@ app.use((req, res) => {
     `);
 });
 
-const server = app.listen(PORT, () => {
-    console.log(`
+// Only start server if not running on Vercel
+if (process.env.NODE_ENV !== 'production') {
+    const server = app.listen(PORT, () => {
+        console.log(`
 🌟 Amrit Sagar Static Server Running 🌟
 📍 Port: ${PORT}
 🌍 Environment: development
 🕐 Started at: ${new Date().toLocaleString()}
 📡 Health check: http://localhost:${PORT}/health
-    `);
-});
-
-// Graceful shutdown
-process.on('SIGTERM', () => {
-    console.log('SIGTERM received, shutting down gracefully');
-    server.close(() => {
-        console.log('Process terminated');
-        process.exit(0);
+        `);
     });
-});
+
+    // Graceful shutdown
+    process.on('SIGTERM', () => {
+        console.log('SIGTERM received, shutting down gracefully');
+        server.close(() => {
+            console.log('Process terminated');
+            process.exit(0);
+        });
+    });
+}
 
 module.exports = app;
