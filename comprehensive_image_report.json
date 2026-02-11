@@ -1,0 +1,203 @@
+{
+  "extraction_date": "2026-02-10 20:57:44",
+  "base_url": "http://amritsagar.org/",
+  "total_pages_found": 12,
+  "pages_analyzed": [
+    "http://amritsagar.org/contact",
+    "http://amritsagar.org/about/bal-ashram-and-amrit-yoga/",
+    "http://amritsagar.org/amenities",
+    "http://amritsagar.org/programs/yoga/",
+    "http://amritsagar.org/programs/treatments/",
+    "http://amritsagar.org/#",
+    "http://amritsagar.org/programs/day-visit/",
+    "http://amritsagar.org/about/amrit-sagar-holistic-farm/",
+    "http://amritsagar.org/",
+    "http://amritsagar.org/programs/retreats/",
+    "http://amritsagar.org/about/aghor-foundation",
+    "http://amritsagar.org/about/our-team/"
+  ],
+  "total_images_found": 22,
+  "images_downloaded": 22,
+  "all_image_urls": [
+    "http://amritsagar.org/t",
+    "https://amritsagar.org/wp-content/uploads/2023/06/10-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/11-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/12-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/13-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/14-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/17-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/19-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/3-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/4.jpg);",
+    "https://amritsagar.org/wp-content/uploads/2023/06/5-600x400_c.jpg",
+    "https://amritsagar.org/wp-content/uploads/2023/06/8-600x400_c.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/10.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/11.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/12.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/13.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/14.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/17.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/19.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/3.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/5.jpg",
+    "https://stayontheganges.com/wp-content/uploads/2023/06/8.jpg"
+  ],
+  "downloaded_images": [
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/19-600x400_c.jpg",
+      "filename": "19-600x400_c.jpg",
+      "filepath": "images\\19-600x400_c.jpg",
+      "size": 87945
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/10-600x400_c.jpg",
+      "filename": "10-600x400_c.jpg",
+      "filepath": "images\\10-600x400_c.jpg",
+      "size": 252439
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/3-600x400_c.jpg",
+      "filename": "3-600x400_c.jpg",
+      "filepath": "images\\3-600x400_c.jpg",
+      "size": 138135
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/14.jpg",
+      "filename": "14.jpg",
+      "filepath": "images\\14.jpg",
+      "size": 279255
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/8.jpg",
+      "filename": "8.jpg",
+      "filepath": "images\\8.jpg",
+      "size": 200495
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/5-600x400_c.jpg",
+      "filename": "5-600x400_c.jpg",
+      "filepath": "images\\5-600x400_c.jpg",
+      "size": 164496
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/12.jpg",
+      "filename": "12.jpg",
+      "filepath": "images\\12.jpg",
+      "size": 159901
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/10.jpg",
+      "filename": "10.jpg",
+      "filepath": "images\\10.jpg",
+      "size": 497810
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/14-600x400_c.jpg",
+      "filename": "14-600x400_c.jpg",
+      "filepath": "images\\14-600x400_c.jpg",
+      "size": 201423
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/13-600x400_c.jpg",
+      "filename": "13-600x400_c.jpg",
+      "filepath": "images\\13-600x400_c.jpg",
+      "size": 141660
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/17.jpg",
+      "filename": "17.jpg",
+      "filepath": "images\\17.jpg",
+      "size": 322784
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/12-600x400_c.jpg",
+      "filename": "12-600x400_c.jpg",
+      "filepath": "images\\12-600x400_c.jpg",
+      "size": 144300
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/19.jpg",
+      "filename": "19.jpg",
+      "filepath": "images\\19.jpg",
+      "size": 135616
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/8-600x400_c.jpg",
+      "filename": "8-600x400_c.jpg",
+      "filepath": "images\\8-600x400_c.jpg",
+      "size": 153873
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/13.jpg",
+      "filename": "13.jpg",
+      "filepath": "images\\13.jpg",
+      "size": 199577
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/11-600x400_c.jpg",
+      "filename": "11-600x400_c.jpg",
+      "filepath": "images\\11-600x400_c.jpg",
+      "size": 134582
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/3.jpg",
+      "filename": "3.jpg",
+      "filepath": "images\\3.jpg",
+      "size": 136360
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/11.jpg",
+      "filename": "11.jpg",
+      "filepath": "images\\11.jpg",
+      "size": 125918
+    },
+    {
+      "url": "https://stayontheganges.com/wp-content/uploads/2023/06/5.jpg",
+      "filename": "5.jpg",
+      "filepath": "images\\5.jpg",
+      "size": 172706
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/17-600x400_c.jpg",
+      "filename": "17-600x400_c.jpg",
+      "filepath": "images\\17-600x400_c.jpg",
+      "size": 192365
+    },
+    {
+      "url": "https://amritsagar.org/wp-content/uploads/2023/06/4.jpg);",
+      "filename": "4.jpg).jpg",
+      "filepath": "images\\4.jpg).jpg",
+      "size": 297387
+    },
+    {
+      "url": "http://amritsagar.org/t",
+      "filename": "t.jpg",
+      "filepath": "images\\t.jpg",
+      "size": 29849
+    }
+  ],
+  "file_sizes": {
+    "19-600x400_c.jpg": 87945,
+    "10-600x400_c.jpg": 252439,
+    "3-600x400_c.jpg": 138135,
+    "14.jpg": 279255,
+    "8.jpg": 200495,
+    "5-600x400_c.jpg": 164496,
+    "12.jpg": 159901,
+    "10.jpg": 497810,
+    "14-600x400_c.jpg": 201423,
+    "13-600x400_c.jpg": 141660,
+    "17.jpg": 322784,
+    "12-600x400_c.jpg": 144300,
+    "19.jpg": 135616,
+    "8-600x400_c.jpg": 153873,
+    "13.jpg": 199577,
+    "11-600x400_c.jpg": 134582,
+    "3.jpg": 136360,
+    "11.jpg": 125918,
+    "5.jpg": 172706,
+    "17-600x400_c.jpg": 192365,
+    "4.jpg).jpg": 297387,
+    "t.jpg": 29849
+  }
+}

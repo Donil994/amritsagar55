@@ -1,0 +1,85 @@
+AMRIT SAGAR WEBSITE STRUCTURE ANALYSIS
+===============================================
+
+MAIN PAGES:
+1. Home (index.html)
+2. About (about-aghor-foundation.html)
+3. Amenities (amenities.html) 
+4. Programs (multiple sub-pages)
+5. Contact (contact.html)
+
+PROGRAM SUB-PAGES:
+- programs-day-visit.html
+- programs-retreats.html  
+- programs-yoga.html
+- programs-treatments.html
+
+ABOUT SUB-PAGES:
+- about-aghor-foundation.html
+- about-bal-ashram.html
+- about-holistic-farm.html
+- about-team.html
+
+IMAGE PLACEMENT ANALYSIS:
+===============================
+
+Based on the original website, here's the image placement strategy:
+
+HOME PAGE (index.html):
+- Hero section: 4.jpg (main ashram image)
+- About section: amrit-sagar-1.jpg (Ganges view)
+- Gallery: Multiple images including 9.jpg, 17.jpg, etc.
+
+ABOUT PAGES:
+- Each about page should have relevant images from the extracted set
+- Foundation page: Founder image (9.jpg)
+- Team page: Professional team member images
+- Farm page: Agricultural/farm images
+
+PROGRAM PAGES:
+- Each program page should have relevant contextual images
+- Yoga page: Practice space images (9.jpg)
+- Retreats page: Retreat/meditation images (17.jpg)
+- Treatments page: Healing/wellness images
+
+CONTACT PAGE:
+- Contact form with location information
+- Map integration with ashram location
+
+NAVIGATION STRUCTURE:
+===============================
+
+All pages should have consistent navigation with:
+- Active state indicators
+- Dropdown menus for Programs and About sections
+- Mobile-responsive hamburger menu
+- Proper linking between all pages
+
+COLOR SCHEME:
+===============================
+- Green and whitish cream theme maintained across all pages
+- Consistent with spiritual/wellness branding
+- Professional and calming aesthetic
+
+ANIMATION STRATEGY:
+===============================
+- Scroll-triggered animations for content reveals
+- Hover effects on interactive elements
+- Smooth transitions between sections
+- Loading states for dynamic content
+
+IMPLEMENTATION PRIORITY:
+===============================
+1. ✅ MAINTAIN current green/cream theme
+2. ✅ PRESERVE all separate page structure  
+3. ✅ PLACE images in original positions
+4. ✅ ENSURE consistent navigation
+5. ✅ ADD smooth animations
+6. ✅ TEST all functionality
+
+NEXT STEPS:
+1. Update each page to match original content exactly
+2. Place images in their original positions
+3. Ensure navigation consistency
+4. Add animations and interactions
+5. Test all pages thoroughly

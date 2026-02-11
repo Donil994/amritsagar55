@@ -1,0 +1,116 @@
+{
+  "homepage": {
+    "hero_background": "images/4.jpg",
+    "about_section": "images/amrit-sagar-1.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg",
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/17.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "about-aghor-foundation": {
+    "hero_background": "images/9.jpg",
+    "about_image": "images/9.jpg",
+    "founder_image": "images/9.jpg",
+    "campus_gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg",
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "about-bal-ashram": {
+    "hero_background": "images/amrit-sagar-1.jpg",
+    "about_image": "images/9.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "about-holistic-farm": {
+    "hero_background": "images/17.jpg",
+    "about_image": "images/17.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "about-team": {
+    "hero_background": "images/9.jpg",
+    "team_images": [
+      "images/9.jpg",
+      "images/17.jpg",
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg"
+    ]
+  },
+  "programs-day-visit": {
+    "hero_background": "images/4.jpg",
+    "overview_image": "images/amrit-sagar-1.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg",
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "programs-retreats": {
+    "hero_background": "images/17.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "programs-yoga": {
+    "hero_background": "images/9.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "programs-treatments": {
+    "hero_background": "images/17.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "amenities": {
+    "hero_background": "images/4.jpg",
+    "gallery": [
+      "images/4.jpg",
+      "images/amrit-sagar-1.jpg",
+      "images/9.jpg",
+      "images/17.jpg"
+    ]
+  },
+  "contact": {
+    "hero_background": "images/amrit-sagar-1.jpg",
+    "contact_image": "images/amrit-sagar-1.jpg"
+  }
+}
