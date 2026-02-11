@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Amrit Sagar Backend
 
 A robust Node.js/Express backend API for the Amrit Sagar Ashram Retreat website, providing comprehensive functionality for managing contacts, bookings, and administrative operations.
@@ -384,3 +385,6 @@ For support and questions:
 ---
 
 Built with ❤️ for Amrit Sagar Ashram Retreat
+=======
+
+>>>>>>> 93e0758f2e7f637c1fec2451f6ac0ee2225771fd
