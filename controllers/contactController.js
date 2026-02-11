@@ -74,7 +74,7 @@ exports.getContacts = async (req, res) => {
         const { status, priority, search } = req.query;
         
         // Build query
-        let query = {};
+        const query = {};
         
         if (status) query.status = status;
         if (priority) query.priority = priority;

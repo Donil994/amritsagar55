@@ -68,7 +68,7 @@ exports.getBookings = async (req, res) => {
         const { status, programType, startDate, endDate, search } = req.query;
         
         // Build query
-        let query = {};
+        const query = {};
         
         if (status) query.status = status;
         if (programType) query['program.type'] = programType;

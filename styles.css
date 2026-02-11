@@ -35,6 +35,87 @@
     --animation-timing: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Slide-up animations */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpDelay {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpScale {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation classes */
+.slide-up {
+    animation: slideUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.slide-up-delay {
+    animation: slideUpDelay var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.slide-up-scale {
+    animation: slideUpScale var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.fade-in-up {
+    animation: fadeInUp var(--animation-duration) var(--animation-timing) forwards;
+}
+
+/* Staggered animations */
+.slide-up-stagger-1 { animation-delay: 0.1s; }
+.slide-up-stagger-2 { animation-delay: 0.2s; }
+.slide-up-stagger-3 { animation-delay: 0.3s; }
+.slide-up-stagger-4 { animation-delay: 0.4s; }
+.slide-up-stagger-5 { animation-delay: 0.5s; }
+
+/* Intersection Observer for scroll animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;

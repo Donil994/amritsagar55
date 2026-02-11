@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="animations.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -59,24 +60,24 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/9.jpg'); background-size: cover; background-position: center;">
+        <section class="hero slide-up" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/9.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Our Team</h1>
-                    <p class="hero-subtitle">Dedicated Service and Spiritual Guidance</p>
+                    <h1 class="slide-up-stagger-1">Our Team</h1>
+                    <p class="hero-subtitle slide-up-stagger-2">Dedicated Service and Spiritual Guidance</p>
                 </div>
             </div>
         </section>
 
         <!-- Team Introduction -->
-        <section class="section">
+        <section class="section animate-on-scroll">
             <div class="container">
                 <div class="section-header">
-                    <h2>Meet Our Team</h2>
-                    <p class="section-subtitle">The people behind our mission</p>
+                    <h2 class="slide-up">Meet Our Team</h2>
+                    <p class="section-subtitle slide-up-stagger-1">The people behind our mission</p>
                 </div>
-                <div class="team-intro">
+                <div class="team-intro animate-on-scroll slide-up-stagger-2">
                     <p>
                         At Amrit Sagar, our team is more than just staff – we are a family of dedicated individuals who have come together 
                         from diverse backgrounds to serve a common purpose. Each team member brings unique skills, 
@@ -92,14 +93,14 @@
         </section>
 
         <!-- Team Grid -->
-        <section class="section section-light">
+        <section class="section section-light animate-on-scroll">
             <div class="container">
                 <div class="section-header">
-                    <h2>Our Leadership</h2>
-                    <p class="section-subtitle">Guiding with compassion and wisdom</p>
+                    <h2 class="slide-up">Our Leadership</h2>
+                    <p class="section-subtitle slide-up-stagger-1">Guiding with compassion and wisdom</p>
                 </div>
                 <div class="team-grid">
-                    <div class="team-member reveal">
+                    <div class="team-member animate-on-scroll slide-up-stagger-1">
                         <div class="member-image">
                             <img src="https://picsum.photos/seed/babaji/400/400.jpg" alt="Baba Harihar Ramji" style="border-radius: 50%;">
                         </div>

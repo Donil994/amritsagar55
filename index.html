@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="animations.js" defer></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -59,17 +60,17 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="home" class="hero" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/4.jpg'); background-size: cover; background-position: center;">
+        <section id="home" class="hero slide-up" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/4.jpg'); background-size: cover; background-position: center;">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Amrit Yoga Holistic Center</h1>
-                    <p class="hero-subtitle">An Ashram Retreat on the Ganges</p>
-                    <p class="hero-description">
+                    <h1 class="slide-up-stagger-1">Amrit Yoga Holistic Center</h1>
+                    <p class="hero-subtitle slide-up-stagger-2">An Ashram Retreat on the Ganges</p>
+                    <p class="hero-description slide-up-stagger-3">
                         Experience tranquil living at Amrit Yoga Holistic Center in Varanasi. 
                         Daily yoga, meditation, and spiritual retreats on the sacred Ganges River.
                     </p>
-                    <div class="hero-buttons">
+                    <div class="hero-buttons slide-up-stagger-4">
                         <a href="about-aghor-foundation.html" class="btn btn-primary">Learn More</a>
                         <a href="programs-day-visit.html" class="btn btn-ghost">View Programs</a>
                         <a href="contact.html" class="btn btn-outline" style="margin-top: 1rem;">Get in Touch</a>
@@ -79,14 +80,14 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="section">
+        <section id="about" class="section animate-on-scroll slide-up">
             <div class="container">
                 <div class="section-header">
-                    <h2>About Amrit Sagar</h2>
-                    <p class="section-subtitle">A spiritual home on the sacred Ganges</p>
+                    <h2 class="slide-up">About Amrit Sagar</h2>
+                    <p class="section-subtitle slide-up-stagger-1">A spiritual home on the sacred Ganges</p>
                 </div>
                 <div class="about-content">
-                <div class="about-text reveal">
+                <div class="about-text animate-on-scroll slide-up-stagger-2">
                         <p>
                             Amrit Sagar is a spiritual retreat center located in the sacred city of Varanasi, India. 
                             Our center offers a unique opportunity to experience authentic ashram life 
@@ -105,55 +106,48 @@
         </section>
 
         <!-- Group Retreats Section -->
-        <section id="retreats" class="section section-light">
+        <section id="retreats" class="section section-light animate-on-scroll">
             <div class="container">
                 <div class="section-header">
-                    <h2>Perfect For Group Retreats</h2>
-                    <p class="section-subtitle">Host your group retreat at our ashram</p>
+                    <h2 class="slide-up">Perfect For Group Retreats</h2>
+                    <p class="section-subtitle slide-up-stagger-1">Host your group retreat at our ashram</p>
                 </div>
                 <div class="retreats-content">
                     <div class="features-grid">
-                        <div class="feature-card slide-in-up reveal">
+                        <div class="feature-card animate-on-scroll slide-up-stagger-1">
                             <div class="feature-icon">
                                 <i class="fas fa-om"></i>
                             </div>
                             <h3>Authentic Ashram Life</h3>
                             <p>Experience traditional living with daily yoga, meditation, and spiritual practices.</p>
                         </div>
-                        <div class="feature-card fade-in reveal">
+                        <div class="feature-card animate-on-scroll slide-up-stagger-2">
                             <div class="feature-icon">
                                 <i class="fas fa-spa"></i>
                             </div>
                             <h3>Yoga & Meditation</h3>
                             <p>Daily classes suitable for all levels, from beginners to advanced practitioners.</p>
                         </div>
-                        <div class="feature-card scale-in reveal">
+                        <div class="feature-card animate-on-scroll slide-up-stagger-3">
                             <div class="feature-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <h3>Selfless Service</h3>
                             <p>Opportunities to serve the community and participate in humanitarian projects.</p>
                         </div>
-                        <div class="feature-card slide-in-up reveal">
+                        <div class="feature-card animate-on-scroll slide-up-stagger-4">
                             <div class="feature-icon">
                                 <i class="fas fa-users"></i>
                             </div>
                             <h3>Community Living</h3>
                             <p>Join a supportive community of spiritual seekers from around the world.</p>
                         </div>
-                        <div class="feature-card fade-in reveal">
+                        <div class="feature-card animate-on-scroll slide-up-stagger-5">
                             <div class="feature-icon">
                                 <i class="fas fa-leaf"></i>
                             </div>
                             <h3>Natural Setting</h3>
                             <p>Peaceful environment on the banks of the sacred Ganges River.</p>
-                        </div>
-                        <div class="feature-card scale-in reveal">
-                            <div class="feature-icon">
-                                <i class="fas fa-utensils"></i>
-                            </div>
-                            <h3>Vegetarian Meals</h3>
-                            <p>Nutritious, sattvic meals prepared with love and served daily.</p>
                         </div>
                     </div>
                     <div class="retreats-cta">
@@ -165,14 +159,14 @@
         </section>
 
         <!-- Amenities Section -->
-        <section id="amenities" class="section">
+        <section id="amenities" class="section animate-on-scroll">
             <div class="container">
                 <div class="section-header">
-                    <h2>Amenities</h2>
-                    <p class="section-subtitle">Everything you need for a comfortable stay</p>
+                    <h2 class="slide-up">Amenities</h2>
+                    <p class="section-subtitle slide-up-stagger-1">Everything you need for a comfortable stay</p>
                 </div>
                 <div class="amenities-grid">
-                    <div class="amenity-category">
+                    <div class="amenity-category animate-on-scroll slide-up-stagger-1">
                         <h3>Included</h3>
                         <ul class="amenity-list">
                             <li><i class="fas fa-check"></i> Daily Yoga Classes</li>
@@ -190,7 +184,7 @@
                             <li><i class="fas fa-check"></i> Dedicated Yoga Hall and Meditation Temple</li>
                         </ul>
                     </div>
-                    <div class="amenity-category">
+                    <div class="amenity-category animate-on-scroll slide-up-stagger-2">
                         <h3>Additional Services</h3>
                         <ul class="amenity-list">
                             <li><i class="fas fa-concierge-bell"></i> Airport pick-up and drop-off</li>

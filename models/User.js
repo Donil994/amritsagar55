@@ -97,8 +97,6 @@ userSchema.virtual('isLocked').get(function() {
 });
 
 // Indexes
-userSchema.index({ email: 1 });
-userSchema.index({ username: 1 });
 userSchema.index({ role: 1 });
 
 // Pre-save middleware to hash password
