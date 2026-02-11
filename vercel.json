@@ -6,5 +6,11 @@
       "source": "/(.*)",
       "destination": "/static-server.js"
     }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/static-server.js"
+    }
   ]
 }
