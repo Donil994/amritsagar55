@@ -131,8 +131,168 @@ app.get('/api/contact', (req, res) => {
     }
 });
 
+// Donation endpoint
+app.post('/api/donate', async (req, res) => {
+    try {
+        const { 
+            currency, 
+            amount, 
+            donationType, 
+            name, 
+            email, 
+            phone, 
+            purpose, 
+            message, 
+            paymentMethod 
+        } = req.body;
+        
+        // Basic validation
+        const errors = [];
+        
+        if (!currency || !['USD', 'INR'].includes(currency)) {
+            errors.push('Valid currency (USD or INR) is required');
+        }
+        
+        if (!amount || amount < 1) {
+            errors.push('Donation amount must be at least 1');
+        }
+        
+        if (!name || name.trim().length < 2) {
+            errors.push('Name is required and must be at least 2 characters');
+        }
+        
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            errors.push('Valid email address is required');
+        }
+        
+        if (!donationType || !['one-time', 'monthly'].includes(donationType)) {
+            errors.push('Valid donation type is required');
+        }
+        
+        if (!paymentMethod || !['card', 'paypal', 'upi', 'bank'].includes(paymentMethod)) {
+            errors.push('Valid payment method is required');
+        }
+
+        if (errors.length > 0) {
+            return res.status(400).json({
+                success: false,
+                message: 'Validation failed',
+                errors: errors
+            });
+        }
+
+        // Create donation record
+        const donationData = {
+            name: name.trim(),
+            email: email.trim().toLowerCase(),
+            phone: phone ? phone.trim() : '',
+            currency: currency.toUpperCase(),
+            amount: parseFloat(amount),
+            donationType,
+            purpose: purpose || 'general',
+            message: message ? message.trim() : '',
+            paymentMethod,
+            status: 'pending',
+            timestamp: new Date().toISOString(),
+            id: 'DON' + Date.now(),
+            ipAddress: req.ip,
+            userAgent: req.get('User-Agent')
+        };
+        
+        // Store in memory (in production, save to database)
+        if (!global.donations) {
+            global.donations = [];
+        }
+        global.donations.push(donationData);
+        
+        // Log the donation
+        console.log('New donation submission:', donationData);
+        
+        // Generate payment URL
+        const paymentUrl = generatePaymentUrl(donationData);
+        
+        res.status(201).json({
+            success: true,
+            message: 'Thank you for your donation! Redirecting to payment...',
+            data: {
+                id: donationData.id,
+                name: donationData.name,
+                email: donationData.email,
+                amount: donationData.amount,
+                currency: donationData.currency,
+                paymentUrl: paymentUrl,
+                transactionId: donationData.id
+            }
+        });
+        
+    } catch (error) {
+        console.error('Donation processing error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Server error. Please try again later.'
+        });
+    }
+});
+
+// Get donations (admin endpoint)
+app.get('/api/donate', (req, res) => {
+    try {
+        const donations = global.donations || [];
+        res.json({
+            success: true,
+            data: donations.reverse() // Most recent first
+        });
+    } catch (error) {
+        console.error('Get donations error:', error);
+        res.status(500).json({
+            success: false,
+            message: 'Server error'
+        });
+    }
+});
+
+// Generate payment URL helper function
+function generatePaymentUrl(donationData) {
+    const baseUrl = 'http://localhost:5000';
+    
+    const params = new URLSearchParams({
+        amount: donationData.amount,
+        currency: donationData.currency,
+        transactionId: donationData.id,
+        name: donationData.name,
+        email: donationData.email,
+        donationType: donationData.donationType
+    });
+
+    switch (donationData.paymentMethod) {
+        case 'paypal':
+            // PayPal URL (sandbox for development)
+            const paypalUrl = donationData.currency === 'USD' 
+                ? 'https://www.sandbox.paypal.com/cgi-bin/webscr'
+                : 'https://www.paypal.com/cgi-bin/webscr';
+            
+            return `${paypalUrl}?cmd=_donations&business=donations@amritsagar.org&item_name=Donation&amount=${donationData.amount}&currency_code=${donationData.currency}&return=${baseUrl}/donate/success&cancel_return=${baseUrl}/donate/cancel`;
+
+        case 'upi':
+            // UPI payment URL (for INR only)
+            if (donationData.currency !== 'INR') {
+                throw new Error('UPI is only available for INR donations');
+            }
+            return `upi://pay?pa=amritsagar@upi&pn=Amrit%20Sagar&am=${donationData.amount}&cu=INR&tn=Donation`;
+
+        case 'bank':
+            // Bank transfer instructions page
+            return `${baseUrl}/donate/bank-transfer?${params.toString()}`;
+
+        case 'card':
+        default:
+            // Credit/debit card payment (Stripe or similar)
+            return `${baseUrl}/donate/card-payment?${params.toString()}`;
+    }
+}
+
 // Handle 404
-app.use('*', (req, res) => {
+app.use((req, res) => {
     res.status(404).send(`
         <!DOCTYPE html>
         <html>

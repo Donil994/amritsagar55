@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Amrit Sagar</title>
+    <meta name="description" content="Support Amrit Sagar Ashram Retreat. Make a donation in USD or INR to help us continue our spiritual and humanitarian work.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="animations.js" defer></script>
+    <script src="donate.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="images/logo-black.png" alt="Amrit Sagar Logo" style="height: 40px;">
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">About</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about-aghor-foundation.html">Aghor Foundation</a></li>
+                            <li><a href="about-bal-ashram.html">Bal Ashram and Amrit Yoga</a></li>
+                            <li><a href="about-holistic-farm.html">Amrit Sagar Holistic Farm</a></li>
+                            <li><a href="about-team.html">Our Team</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="amenities.html" class="nav-link">Amenities</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Programs</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="programs-day-visit.html">Day Visit</a></li>
+                            <li><a href="programs-retreats.html">Retreats</a></li>
+                            <li><a href="programs-yoga.html">Yoga</a></li>
+                            <li><a href="programs-treatments.html">Treatments</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="donate.html" class="nav-link active">Donate</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero slide-up" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)), url('images/4.jpg'); background-size: cover; background-position: center;">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="slide-up-stagger-1">Support Our Mission</h1>
+                    <p class="hero-subtitle slide-up-stagger-2">Your Generosity Makes a Difference</p>
+                    <p class="hero-description slide-up-stagger-3">
+                        Join us in spreading peace, love, and spiritual growth. Your donation helps us continue 
+                        our humanitarian work, maintain the ashram, and provide spiritual education to all who seek it.
+                    </p>
+                    <div class="hero-buttons slide-up-stagger-4">
+                        <a href="#donate-form" class="btn btn-primary">Donate Now</a>
+                        <a href="#impact" class="btn btn-ghost">See Your Impact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="section animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="slide-up">Your Impact</h2>
+                    <p class="section-subtitle slide-up-stagger-1">How Your Donation Helps</p>
+                </div>
+                <div class="impact-grid">
+                    <div class="impact-card animate-on-scroll slide-up-stagger-1">
+                        <div class="impact-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>Support free yoga and meditation classes for underprivileged communities</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll slide-up-stagger-2">
+                        <div class="impact-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <h3>Food Programs</h3>
+                        <p>Provide nutritious meals to ashram residents and local communities in need</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll slide-up-stagger-3">
+                        <div class="impact-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>Facilities</h3>
+                        <p>Maintain and improve our spiritual facilities for practitioners worldwide</p>
+                    </div>
+                    <div class="impact-card animate-on-scroll slide-up-stagger-4">
+                        <div class="impact-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3>Humanitarian Aid</h3>
+                        <p>Fund medical camps, disaster relief, and community service projects</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donation Form Section -->
+        <section id="donate-form" class="section section-light animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="slide-up">Make a Donation</h2>
+                    <p class="section-subtitle slide-up-stagger-1">Choose your amount and currency</p>
+                </div>
+                
+                <div class="donation-container">
+                    <div class="donation-form-wrapper animate-on-scroll slide-up-stagger-1">
+                        <div class="currency-selector">
+                            <h3>Select Currency</h3>
+                            <div class="currency-options">
+                                <button class="currency-btn active" data-currency="USD">
+                                    <i class="fas fa-dollar-sign"></i>
+                                    USD
+                                </button>
+                                <button class="currency-btn" data-currency="INR">
+                                    <i class="fas fa-rupee-sign"></i>
+                                    INR
+                                </button>
+                            </div>
+                        </div>
+
+                        <form class="donation-form" id="donationForm">
+                            <div class="amount-section">
+                                <h3>Choose Amount</h3>
+                                <div class="preset-amounts" id="presetAmounts">
+                                    <button type="button" class="amount-btn" data-amount="10">$10</button>
+                                    <button type="button" class="amount-btn" data-amount="25">$25</button>
+                                    <button type="button" class="amount-btn" data-amount="50">$50</button>
+                                    <button type="button" class="amount-btn" data-amount="100">$100</button>
+                                    <button type="button" class="amount-btn" data-amount="250">$250</button>
+                                    <button type="button" class="amount-btn" data-amount="500">$500</button>
+                                </div>
+                                
+                                <div class="custom-amount">
+                                    <label for="customAmount">Custom Amount</label>
+                                    <div class="amount-input-wrapper">
+                                        <span class="currency-symbol">$</span>
+                                        <input type="number" id="customAmount" name="amount" min="1" placeholder="Enter amount">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="donation-type">
+                                <h3>Donation Type</h3>
+                                <div class="donation-options">
+                                    <label class="donation-option">
+                                        <input type="radio" name="donationType" value="one-time" checked>
+                                        <span class="radio-custom"></span>
+                                        <span class="option-text">One-time Donation</span>
+                                    </label>
+                                    <label class="donation-option">
+                                        <input type="radio" name="donationType" value="monthly">
+                                        <span class="radio-custom"></span>
+                                        <span class="option-text">Monthly Donation</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="donor-info">
+                                <h3>Your Information</h3>
+                                <div class="form-group">
+                                    <label for="donorName">Full Name *</label>
+                                    <input type="text" id="donorName" name="name" required>
+                                    <span class="form-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorEmail">Email Address *</label>
+                                    <input type="email" id="donorEmail" name="email" required>
+                                    <span class="form-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorPhone">Phone Number (Optional)</label>
+                                    <input type="tel" id="donorPhone" name="phone">
+                                    <span class="form-error"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donationPurpose">Purpose (Optional)</label>
+                                    <select id="donationPurpose" name="purpose">
+                                        <option value="">Select purpose</option>
+                                        <option value="general">General Donation</option>
+                                        <option value="education">Education Programs</option>
+                                        <option value="food">Food Programs</option>
+                                        <option value="facilities">Facility Maintenance</option>
+                                        <option value="humanitarian">Humanitarian Aid</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="donorMessage">Message (Optional)</label>
+                                    <textarea id="donorMessage" name="message" rows="3" placeholder="Add a message with your donation"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="payment-methods">
+                                <h3>Payment Method</h3>
+                                <div class="payment-options">
+                                    <div class="payment-option" data-method="card">
+                                        <i class="fas fa-credit-card"></i>
+                                        <span>Credit/Debit Card</span>
+                                    </div>
+                                    <div class="payment-option" data-method="paypal">
+                                        <i class="fab fa-paypal"></i>
+                                        <span>PayPal</span>
+                                    </div>
+                                    <div class="payment-option" data-method="upi">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <span>UPI (India)</span>
+                                    </div>
+                                    <div class="payment-option" data-method="bank">
+                                        <i class="fas fa-university"></i>
+                                        <span>Bank Transfer</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="donationMessage" class="form-message" style="display: none;"></div>
+
+                            <button type="submit" class="btn btn-primary donate-btn" id="submitDonation">
+                                <i class="fas fa-heart"></i> Complete Donation
+                                <span class="btn-loader" style="display: none;"><i class="fas fa-spinner fa-spin"></i></span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="donation-info animate-on-scroll slide-up-stagger-2">
+                        <div class="info-card">
+                            <h3><i class="fas fa-shield-alt"></i> Secure & Safe</h3>
+                            <p>Your payment information is encrypted and secure. We use industry-standard payment processing.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-globe"></i> Global Impact</h3>
+                            <p>Your donation supports our mission to spread peace and spirituality worldwide.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-receipt"></i> Tax Deductible</h3>
+                            <p>All donations are tax-deductible to the extent allowed by law. You'll receive a receipt for your records.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3><i class="fas fa-users"></i> Transparent</h3>
+                            <p>We believe in complete transparency. Annual reports are available upon request.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="section animate-on-scroll">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="slide-up">Supporter Stories</h2>
+                    <p class="section-subtitle slide-up-stagger-1">Hear from our generous supporters</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card animate-on-scroll slide-up-stagger-1">
+                        <div class="testimonial-content">
+                            <p>"Supporting Amrit Sagar has been one of the most rewarding experiences. Seeing the impact of my contributions on the community brings me joy."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>Monthly Donor, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll slide-up-stagger-2">
+                        <div class="testimonial-content">
+                            <p>"The ashram's work in education and humanitarian aid is truly inspiring. I'm proud to support their mission."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Raj Patel</h4>
+                                <span>Supporter, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card animate-on-scroll slide-up-stagger-3">
+                        <div class="testimonial-content">
+                            <p>"The transparency and impact of their programs convinced me to become a regular contributor. Highly recommended!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Annual Donor, Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Amrit Sagar</h3>
+                    <p>A spiritual retreat center dedicated to peace, meditation, and humanitarian service.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-aghor-foundation.html">About</a></li>
+                        <li><a href="programs-retreats.html">Programs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="programs-yoga.html">Yoga Classes</a></li>
+                        <li><a href="programs-retreats.html">Retreats</a></li>
+                        <li><a href="programs-day-visit.html">Day Visit</a></li>
+                        <li><a href="programs-treatments.html">Treatments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@amritsagar.org</li>
+                        <li><i class="fas fa-phone"></i> +91 88875 33641</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Varanasi, UP, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Amrit Sagar. All rights reserved. | <a href="#" style="color: inherit;">Privacy Policy</a> | <a href="#" style="color: inherit;">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
