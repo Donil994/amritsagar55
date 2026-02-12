@@ -143,24 +143,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: var(--bg-white);
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: var(--text-dark);
     text-align: center;
     margin-bottom: 1rem;
 }
 
 h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: var(--text-dark);
 }
 
 h4 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: var(--text-dark);
 }
 
@@ -172,8 +172,8 @@ p {
 .section-subtitle {
     text-align: center;
     color: var(--text-light);
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
     font-family: var(--font-body);
 }
 
@@ -218,7 +218,7 @@ p {
 
 .nav-logo h2 {
     color: var(--primary-color);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -355,7 +355,7 @@ p {
 }
 
 .hero-text h1 {
-    font-size: 4rem;
+    font-size: 3.2rem;
     color: var(--bg-white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: slideInUp 1s ease-out;
@@ -363,19 +363,19 @@ p {
 }
 
 .hero-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: var(--bg-white);
     font-family: var(--font-heading);
     font-weight: 400;
-    animation: slideInUp 1s ease-out 0.3s;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    animation: fadeIn 1s ease-out 0.3s;
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 3rem;
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
     color: rgba(255, 255, 255, 0.95);
-    line-height: 1.8;
+    line-height: 1.7;
     animation: fadeIn 1s ease-out 0.5s;
 }
 
@@ -390,17 +390,17 @@ p {
 /* Buttons - Modern Approach */
 .btn {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1rem;
+    border-radius: 25px;
+    font-weight: 500;
+    font-size: 0.95rem;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
     position: relative;
     overflow: hidden;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center;
+    border: none;
     transform: translateZ(0);
 }
 
@@ -427,8 +427,8 @@ p {
 
 .btn-primary:hover {
     background: linear-gradient(135deg, var(--accent-color) 0%, var(--secondary-color) 100%);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
 }
 
 .btn-secondary {
@@ -439,8 +439,8 @@ p {
 
 .btn-secondary:hover {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(45, 80, 22, 0.4);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 6px 20px rgba(45, 80, 22, 0.4);
 }
 
 .btn-outline {
@@ -467,8 +467,8 @@ p {
 .btn-outline:hover {
     color: var(--bg-white);
     border-color: var(--secondary-color);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3);
 }
 
 .btn-outline:hover::after {
@@ -500,8 +500,8 @@ p {
 
 .btn-ghost:hover {
     border-color: rgba(255, 255, 255, 0.6);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px) scale(1.01);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
 }
 
 .btn-ghost:hover::before {
@@ -552,11 +552,14 @@ p {
 
 .feature-card {
     background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     position: relative;
     overflow: hidden;
 }
@@ -583,16 +586,16 @@ p {
 }
 
 .feature-icon {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1rem;
     color: var(--bg-white);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
 .feature-card h3 {
@@ -606,17 +609,17 @@ p {
 
 .retreats-cta {
     background: var(--bg-white);
-    padding: 2.5rem;
-    border-radius: 15px;
+    padding: 1.5rem;
+    border-radius: 12px;
     box-shadow: var(--shadow);
     text-align: center;
 }
 
 .retreats-cta p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: var(--text-dark);
-    margin-bottom: 2rem;
-    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
 }
 
 /* Amenities Section */
@@ -629,8 +632,8 @@ p {
 
 .amenity-category h3 {
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.3rem;
 }
 
 .amenity-list {
@@ -664,10 +667,11 @@ p {
 
 .important-note {
     background: var(--bg-white);
-    padding: 2rem;
-    border-radius: 15px;
+    padding: 1.5rem;
+    border-radius: 12px;
     text-align: center;
     box-shadow: var(--shadow);
+    margin-top: 2rem;
     border-left: 4px solid var(--secondary-color);
 }
 
@@ -1082,11 +1086,15 @@ p {
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
     }
 
     .hero {
@@ -1095,11 +1103,11 @@ p {
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .hero-buttons {
@@ -1166,8 +1174,18 @@ p {
     }
 
     .btn {
-        padding: 12px 25px;
+        padding: 10px 20px;
         font-size: 0.9rem;
+    }
+
+    .feature-card {
+        padding: 1.2rem;
+    }
+
+    .feature-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
     }
 
     .feature-card,
@@ -2904,7 +2922,7 @@ p {
 
 .contact-item {
     background: var(--bg-white);
-    padding: 1.5rem;
+    padding: 1.2rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;
     box-shadow: var(--shadow);
@@ -2919,8 +2937,8 @@ p {
 
 .contact-item h3 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -2949,7 +2967,7 @@ p {
 /* Enhanced Form Styles */
 .form {
     background: var(--bg-white);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
     border: 1px solid rgba(16, 185, 129, 0.1);
@@ -2978,10 +2996,10 @@ p {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.625rem 0.875rem;
     border: 2px solid #e5e7eb;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     transition: var(--transition);
     background: var(--bg-white);
     color: var(--text-dark);
