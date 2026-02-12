@@ -246,6 +246,42 @@ p {
     color: var(--secondary-color);
 }
 
+.nav-menu .nav-item a.active {
+    color: var(--secondary-color);
+}
+
+/* Donate Button in Navigation */
+.nav-menu .nav-item a[href="donate.html"] {
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    color: var(--bg-white) !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+.nav-menu .nav-item a[href="donate.html"]:hover {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+    color: var(--bg-white) !important;
+    text-decoration: none;
+}
+
+.nav-menu .nav-item a[href="donate.html"].active {
+    background: linear-gradient(135deg, var(--accent-color), var(--secondary-color));
+    color: var(--bg-white) !important;
+    text-decoration: none;
+}
+
 .nav-link::after {
     content: '';
     position: absolute;
@@ -323,7 +359,7 @@ p {
 .hero {
     height: 100vh;
     min-height: 600px;
-    background: linear-gradient(135deg, rgba(16, 185, 129, 0.85), rgba(5, 150, 105, 0.75)),
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), rgba(5, 150, 105, 0.3)),
                 url('images/4.jpg');
     background-size: cover;
     background-position: center;
@@ -1248,6 +1284,18 @@ p {
 
     .nav-menu.active {
         left: 0;
+    }
+
+    /* Mobile Donate Button */
+    .nav-menu .nav-item a[href="donate.html"] {
+        margin: 1rem auto;
+        max-width: 200px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
     }
 
     .dropdown-menu {
