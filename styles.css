@@ -101,6 +101,42 @@
     transform: none;
 }
 
+/* Popup animations for cards */
+@keyframes popup {
+    0% {
+        transform: scale(0.8) translateY(20px);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05) translateY(-5px);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popupHover {
+    0% {
+        transform: translateY(-5px) scale(1);
+    }
+    50% {
+        transform: translateY(-8px) scale(1.05);
+    }
+    100% {
+        transform: translateY(-5px) scale(1);
+    }
+}
+
+.popup-animation {
+    animation: popup 0.6s ease-out forwards;
+}
+
+.popup-hover:hover {
+    animation: popupHover 0.3s ease-in-out;
+}
+
 /* Staggered animations - DISABLED */
 .slide-up-stagger-1 { opacity: 1; transform: none; }
 .slide-up-stagger-2 { opacity: 1; transform: none; }
@@ -618,6 +654,17 @@ p {
     margin-bottom: 30px;
 }
 
+.feature-card.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.feature-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
 .feature-card::before {
     content: '';
     position: absolute;
@@ -721,6 +768,17 @@ p {
     transition: var(--transition);
     position: relative;
     margin-bottom: 30px;
+}
+
+.retreat-card.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.retreat-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .retreat-card:hover {
@@ -922,6 +980,17 @@ p {
     transition: var(--transition);
     position: relative;
     margin-bottom: 30px;
+}
+
+.program-card.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.program-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .program-card::before {
@@ -1160,6 +1229,17 @@ p {
     position: relative;
     cursor: pointer;
     margin-bottom: 30px;
+}
+
+.gallery-item.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.gallery-item.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .gallery-item::before {
@@ -1616,6 +1696,17 @@ p {
     margin-bottom: 30px;
 }
 
+.team-member.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.team-member.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
 .team-member:hover {
     transform: translateY(-5px);
 }
@@ -1787,6 +1878,17 @@ p {
     margin-bottom: 30px;
 }
 
+.value-item.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.value-item.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
 .value-item::before {
     content: '';
     position: absolute;
@@ -1850,6 +1952,17 @@ p {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+}
+
+.stat-item.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stat-item.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .stat-item::before {
@@ -1920,6 +2033,17 @@ p {
     margin-bottom: 30px;
 }
 
+.product-card.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.product-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
 .product-card:hover {
     transform: translateY(-5px);
 }
@@ -1984,6 +2108,17 @@ p {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+}
+
+.metric-item.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.metric-item.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .metric-item::before {
@@ -2392,7 +2527,14 @@ p {
 .treatments-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 4rem;
     margin-top: 3rem;
 }
 
@@ -3742,6 +3884,17 @@ p {
     position: relative;
     overflow: hidden;
     margin-bottom: 30px;
+}
+
+.impact-card.animate-on-scroll {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.impact-card.animate-on-scroll.animated {
+    opacity: 1;
+    transform: scale(1) translateY(0);
 }
 
 .impact-card::before {
